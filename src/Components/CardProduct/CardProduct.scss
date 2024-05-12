@@ -1,0 +1,152 @@
+.card__container {
+  height: 460px;
+  width: 320px;
+  min-width: 320px;
+  background: #27240d;
+  border-radius: 12px;
+  padding: 20px;
+  margin-right: 20px;
+  margin-bottom: 20px;
+  color: white;
+  position: relative;
+}
+
+.card-heart {
+  font-size: 24px;
+  position: absolute;
+  left: 20px;
+  top: 15px;
+}
+
+.card--cart {
+  font-size: 24px;
+  position: absolute;
+  right: 20px;
+  top: 15px;
+}
+
+.card-image {
+  /* width: 90%; */
+  padding: 0 20px;
+  height: 180px;
+  /* transition: 2s; */
+}
+
+.card-image img {
+  height: 100%;
+  width: 100%;
+  object-fit: cover;
+  transform: rotate(-30deg);
+  /* transform: rotateX(180deg); */
+  transition: 0.5s;
+}
+
+.card__title,
+.card__price {
+  font-size: 24px;
+  font-weight: bold;
+  // margin-top: 8px;
+  text-align: center;
+  transition: 0.5s;
+}
+
+.card__title {
+  color: #ff3366;
+}
+
+.card__size,
+.card__color {
+  display: flex;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.card__size span {
+  color: black;
+  background: #dadada;
+  margin: 0 2px;
+  padding: 0px 4px;
+  border-radius: 4px;
+}
+
+.card__color {
+  display: flex;
+  margin-top: 4px;
+  align-items: center;
+  transition: 0.5s;
+}
+
+.card__color .green,
+.card__color .red,
+.card__color .black {
+  height: 16px;
+  width: 16px;
+  border-radius: 16px;
+  margin: 0 4px;
+}
+
+.green {
+  background: green;
+}
+
+.red {
+  background: red;
+}
+
+.black {
+  background: black;
+}
+
+.card__action {
+  display: flex;
+  justify-content: space-evenly;
+  margin-top: 10px;
+  transition: 0.5s;
+}
+
+.card__action button {
+  padding: 8px 16px;
+  margin: 0 8px;
+  background: #4daf54;
+  border: none;
+  color: white;
+  outline: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: 0.5s;
+
+  &:hover {
+    background-color: darken($color: #4daf54, $amount: 5);
+    transform: scale(1.1);
+    color: black;
+  }
+}
+
+// .card:hover img {
+//   transform: translateY(-86px) rotate(5deg);
+// }
+
+// .card:hover .title,
+// .card:hover .price {
+//   text-align: left;
+//   transform: translateY(-86px);
+// }
+
+// .size {
+//   margin-top: 100px;
+// }
+
+// .size,
+// .color,
+// .action {
+//   opacity: 0;
+//   visibility: hidden;
+// }
+
+// .card:hover .size,
+// .card:hover .color,
+// .card:hover .action {
+//   opacity: 100;
+//   visibility: visible;
+//   transform: translateY(-150px);
+// }

@@ -1,0 +1,19 @@
+.genre_container {
+  position: relative;
+}
+
+.genre__option {
+  display: inline-flex;
+  position: absolute;
+  background-color: #1565c0;
+  color: var(--white);
+  border-radius: 11px;
+  outline: none;
+  box-shadow: rgba(0, 0, 0, 0.24) 0px 3px 8px;
+  top: 8%;
+  left: 5%;
+  transition: all linear 0.2s;
+  i {
+    color: var(--white);
+  }
+}

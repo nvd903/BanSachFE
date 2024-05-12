@@ -1,0 +1,129 @@
+.search__container {
+  min-width: 300px;
+  width: var(--width-search);
+  height: var(--height-search);
+  display: flex;
+  align-items: center;
+  background-color: rgba(22, 24, 35, 0.06);
+  border: 1px solid transparent;
+  border-radius: 16px;
+  position: relative;
+  overflow: hidden;
+
+  --btn-search-width: 40px;
+  //khi thẻ con được focus
+  &:focus-within {
+    border-color: rgba(22, 24, 35, 0.2);
+    .search__btn--search {
+      border-left: 1px solid rgba(22, 24, 35, 0.2);
+      background-color: rgba(22, 24, 35, 0.1);
+      &:hover {
+        background-color: rgba(22, 24, 35, 0.14);
+      }
+      &:active {
+        background-color: rgba(22, 24, 35, 0.2);
+      }
+    }
+  }
+}
+
+.search__input {
+  height: 100%;
+  flex: 1;
+  padding: 0 20px 0 10px;
+  background-color: transparent;
+  font-size: 1rem;
+  caret-color: #cc0000;
+  margin-right: 10px;
+}
+
+.search__btn--clear,
+.search__spinner--loading {
+  position: absolute;
+  right: calc(
+    var(--btn-search-width) + 6px
+  ); //cách ngoài cùng bên phải 1 khoảng = chiều rộng nút btn search + 8px
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 1rem;
+  font-weight: 500;
+  color: rgba(22, 24, 35, 0.54);
+}
+
+.search__btn--clear {
+  width: 20px;
+  height: 20px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  //   background-color: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  &:hover {
+    background-color: rgba(22, 24, 35, 0.14);
+  }
+  &:active {
+    background-color: rgba(22, 24, 35, 0.2);
+  }
+}
+
+.search__btn--search {
+  width: var(--btn-search-width);
+  height: var(--height-search);
+  padding: 0 8px;
+  color: rgba(22, 24, 35, 0.54);
+
+  &:hover {
+    background-color: rgba(22, 24, 35, 0.14);
+  }
+  &:active {
+    background-color: rgba(22, 24, 35, 0.2);
+  }
+}
+
+.box__search--result {
+  width: var(--width-search);
+}
+
+.search__book-result {
+  display: flex;
+  flex-wrap: wrap;
+  padding: 4px 16px;
+  font-size: 1.2rem;
+  font-weight: 500;
+  cursor: pointer;
+  &:hover {
+    background-color: var(--bg-blue);
+    color: var(--text-color);
+  }
+
+  &:active {
+    background-color: darken(#f3f9fb, 2);
+    color: var(--text-color);
+  }
+}
+
+//item result search
+.search__result--item {
+  display: block;
+  padding: 4px 16px;
+  min-height: 32px;
+  font-size: 1rem;
+  font-weight: 500;
+  transition: all 0.1 linear;
+  cursor: pointer;
+  &:last-child {
+    margin-bottom: 10px;
+  }
+
+  &:hover {
+    background-color: var(--bg-blue);
+    color: var(--text-color);
+  }
+
+  &:active {
+    background-color: darken(#f3f9fb, 2);
+    color: var(--text-color);
+  }
+}

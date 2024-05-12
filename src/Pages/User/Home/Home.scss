@@ -1,0 +1,17 @@
+.home__main {
+  margin-top: 30px;
+}
+
+.tabs__header--bestseller {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: var(--light-blue);
+  // color: #1e90ff;
+  background-color: #e6e6fa;
+  font-size: 1.4rem;
+  font-weight: 600;
+  border-bottom: 4px solid var(--dark-blue);
+}

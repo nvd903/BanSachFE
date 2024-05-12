@@ -1,0 +1,74 @@
+.container {
+  width: 100%;
+}
+
+.linechart {
+  width: 60%;
+  height: 400px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  margin-right: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  margin-left: 20px;
+
+  display: flex;
+  justify-content: center;
+}
+
+.barchart {
+  width: 95%;
+  height: 500px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #fff;
+  border-radius: 10px;
+  margin-bottom: 20px;
+  margin-top: 20px;
+  margin-left: 20px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+}
+
+.dashboard__wraper {
+  width: 95%;
+  display: flex;
+  justify-content: space-between;
+}
+
+.dashboard__wraper--news {
+  width: 35%;
+  display: flex;
+  flex-direction: column;
+}
+
+.piechart {
+  width: 100%;
+  height: 400px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  display: flex;
+  justify-content: center;
+  margin-right: -20px;
+  padding: 20px;
+}
+
+.quantityOfNews {
+  width: 100%;
+  height: 100px;
+  background-color: #fff;
+  margin-bottom: 20px;
+  border-radius: 10px;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  font-weight: 700;
+  font-size: 24px;
+  color: #1e90ff;
+  span {
+    color: #7b68ee;
+  }
+}

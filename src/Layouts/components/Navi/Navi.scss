@@ -1,0 +1,16 @@
+.nav__item {
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 10px 10px 11px 10px;
+  color: var(--text-color);
+  transition: color 0.3s ease-in-out, box-shadow 0.3s ease-in-out;
+  &:hover {
+    // color: var(--dark-blue);
+    color: black;
+  }
+}
+
+.active {
+  box-shadow: inset 100px 0 0 0 var(--dark-blue);
+  color: white;
+}

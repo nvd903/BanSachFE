@@ -1,0 +1,100 @@
+.button__wrapper {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-width: 50px;
+  max-height: 46px;
+  min-height: 46px;
+  font-size: 1.4rem;
+  font-weight: 600;
+  // font-family: Po;
+  padding: 4px 8px;
+  border: none;
+  outline: none;
+  border-radius: 4px;
+  background-color: transparent;
+  color: var(--text-color);
+  cursor: pointer;
+  transition: ease-in 0.2s;
+
+  &:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+    border-radius: 10px;
+    .button__badge {
+      background-color: #333;
+    }
+  }
+
+  //nếu có thêm một button đứng cạnh thì tự động cách bên trái khoảng 8px
+  + .wrapper {
+    margin-left: 8px;
+  }
+}
+
+.button__icon {
+  display: inline-block;
+  width: 24px;
+  text-align: center;
+}
+
+// khi button có icon thì chữ cách icon 8px
+//+ tức là khi phải có cả hai thì mới áp dụng css
+.button__icon + .button__label,
+.button__label + .button__icon {
+  margin-left: 8px;
+}
+
+.button__badge {
+  position: absolute;
+  width: 20px;
+  height: 20px;
+  border: none;
+  outline: none;
+  border-radius: 50%;
+  display: inline-flex;
+  top: 4px;
+  right: 4px;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--dark-blue);
+  color: var(--white);
+  font-size: 0.7rem;
+}
+
+// áp dụng cho từng thiết kế thêm sau
+
+//options type button
+.btn__badge {
+  position: relative;
+}
+
+.btn__item-menu {
+  display: inline-flex;
+  justify-content: flex-start;
+  min-width: 50px;
+  max-height: 46px;
+  min-height: 46px;
+  font-size: 1.2rem;
+  font-weight: 600;
+  padding: 4px 8px;
+  border: none;
+  outline: none;
+  background-color: transparent;
+  color: var(--text-color);
+  overflow: hidden;
+  object-fit: cover;
+  cursor: pointer;
+  transition: ease-in 0.2s;
+  &:hover {
+    box-shadow: rgba(99, 99, 99, 0.2) 0px 2px 8px 0px;
+    background-color: var(--dark-blue);
+    color: var(--white);
+  }
+
+  &:last-child {
+    margin-bottom: 8px;
+  }
+}
+//options size button

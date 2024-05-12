@@ -1,0 +1,64 @@
+.container {
+  width: 100%;
+  position: relative;
+  margin-bottom: 20px;
+}
+
+.order {
+  display: flex;
+  flex-direction: column;
+  width: 95%;
+  background-color: #fff;
+  box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+  padding: 6px 18px;
+  margin-top: 20px;
+  border-radius: 8px;
+  font-size: 1.2rem;
+}
+
+.infor__order,
+.infor__book {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.infor__order {
+  border-bottom: 1px solid #eee;
+}
+.book__col {
+  min-width: 200px;
+  display: flex;
+}
+
+.book__name {
+  min-width: 400px;
+}
+
+.action {
+  display: flex;
+  border-top: 1px solid #eee;
+}
+
+.comfirmbtn,
+.cancelbtn {
+  display: flex;
+  width: 200px;
+  height: 40px;
+  margin-right: 20px;
+  justify-content: center;
+  align-items: center;
+  padding: 0px 20px;
+  margin-top: 10px;
+  background-color: #87cefa;
+  color: var(--white);
+  border-radius: 8px;
+  &:active {
+    background-color: darken($color: #87cefa, $amount: 20);
+  }
+}
+
+.comfirmbtn {
+  margin-left: 75%;
+}
