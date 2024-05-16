@@ -18,11 +18,14 @@ function AdminDashboard() {
   const fetchAllOrder = async () => {
     const res = await getAllOrder();
     setDataOrders(res);
+    console.log("dataOrders:::", dataOrders );
   };
 
   const fetchAllBooks = async () => {
     const result = await getAllBooks();
     setDataAllBooks(result);
+    console.log("dataAllBooks:::", dataAllBooks );
+
   };
 
   useEffect(() => {

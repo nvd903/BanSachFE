@@ -34,9 +34,9 @@ function CardBook({
             <i className="fa fa-cart-plus" />
             Thêm vào giỏ hàng
           </buton>
-          <button className={cx("btn__compare")} onClick={handleCompare}>
+          {/* <button className={cx("btn__compare")} onClick={handleCompare}>
             So sánh sản phẩm tương tự
-          </button>
+          </button> */}
         </div>
       </div>
     </div>

@@ -1,39 +1,52 @@
-import { Container } from "reactstrap";
 import { useDispatch, useSelector } from "react-redux";
 
-import CardProduct from "../../../Components/CardProduct";
-import sneaker from "../../../assets/images/sneakers1.png";
-import { useEffect } from "react";
-import { getAllUsers } from "../../../store/apiRequest";
+import Grid from "@mui/material/Grid";
+import { useEffect, useState } from "react";
+import BannerTilte from "../../../Layouts/AdminLayout/components/BannerTitle";
+import { getAllUsers } from "../../../ApiServices/userApi";
+import { toast } from "react-toastify";
+import BookDataGrid from "./BookDataGrid";
+
+// import { getAllUsers } from "../../../store/apiRequest";
 import "./AccountManagement.scss";
 
 function AccountManagerment() {
-  const currentUser = useSelector((state) => state.auth.login.currentUser);
-  const dispatch = useDispatch();
+  const currentUser = useSelector((state) => state.auth.login?.currentUser);
+  const [dataAllUsers, setDataAllUsers] = useState([]);
   useEffect(() => {
-    getAllUsers(currentUser.accessToken, dispatch);
+    fetchDataAllUsers();
   }, []);
-  const listUser = useSelector((state) => state.users.users?.allUsers);
 
-  console.log("listUser", listUser);
+  const fetchDataAllUsers = async () => {
+    if (!currentUser) {
+      toast.error("chưa đăng nhâp");
+      return;
+    } else {
+      if (!currentUser.isadmin) {
+        toast.error("not authenzation");
+      } else {
+        const res = await getAllUsers(currentUser.accessToken);
+        setDataAllUsers(res);
+      }
+    }
+  };
+
+
+
+
+
   return (
-    <Container fluid="md">
-      <div className="accountpage__inner">
-        <div className="accountpage__main">
-          {listUser &&
-            listUser.length > 0 &&
-            listUser.map((user) => {
-              return (
-                <CardProduct
-                  key={user._id}
-                  srcImg={sneaker}
-                  cardTitle={user.username}
-                />
-              );
-            })}
-        </div>
-      </div>
-    </Container>
+    <Grid container className="genre_container copy">
+      <BannerTilte
+        titlePage={"Accounts Management Page"}
+        btnCreate = {false}
+      />
+      <BookDataGrid
+        allUsers={dataAllUsers}
+        currentUser={currentUser}
+      />
+      {/* <Pagination page={page} setPage={setPage} totalPage={totalPages || 10} /> */}
+    </Grid>
   );
 }
 

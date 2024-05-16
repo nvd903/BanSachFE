@@ -74,7 +74,7 @@ export default function AuthorDataGrid({
             <TableRow>
               <TableCell align="left">Ordinal number</TableCell>
               <TableCell align="left">Name</TableCell>
-              <TableCell align="left">Avatar</TableCell>
+              {/* <TableCell align="left">Avatar</TableCell> */}
               <TableCell align="left">Age</TableCell>
               <TableCell align="left">Hometown</TableCell>
               <TableCell align="left">Amount of books</TableCell>
@@ -113,7 +113,7 @@ export default function AuthorDataGrid({
                     >
                       <TableCell align="left">{index + 1}</TableCell>
                       <TableCell align="left">{row.name}</TableCell>
-                      <TableCell align="left">avatar</TableCell>
+                      {/* <TableCell align="left">avatar</TableCell> */}
                       <TableCell align="left">{row.age}</TableCell>
                       <TableCell align="left">{row.hometown}</TableCell>
                       <TableCell align="center">{row.books.length}</TableCell>

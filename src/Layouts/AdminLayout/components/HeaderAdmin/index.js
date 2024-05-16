@@ -82,7 +82,7 @@ function HeaderAdmin({ handleDrawerOpen, open }) {
     >
       <MenuItem>
         <IconButton size="large" aria-label="show 4 new mails" color="inherit">
-          <Badge badgeContent={4} color="error">
+          <Badge badgeContent={0} color="error">
             <MailIcon />
           </Badge>
         </IconButton>
@@ -94,7 +94,7 @@ function HeaderAdmin({ handleDrawerOpen, open }) {
           aria-label="show 17 new notifications"
           color="inherit"
         >
-          <Badge badgeContent={17} color="error">
+          <Badge badgeContent={0} color="error">
             <NotificationsIcon />
           </Badge>
         </IconButton>
@@ -170,7 +170,7 @@ function HeaderAdmin({ handleDrawerOpen, open }) {
               aria-label="show 4 new mails"
               color="inherit"
             >
-              <Badge badgeContent={100} max={99} color="error">
+              <Badge badgeContent={0} max={99} color="error">
                 <MailIcon />
               </Badge>
             </IconButton>
@@ -179,7 +179,7 @@ function HeaderAdmin({ handleDrawerOpen, open }) {
               aria-label="show 17 new notifications"
               color="inherit"
             >
-              <Badge badgeContent={17} color="error">
+              <Badge badgeContent={0} color="error">
                 <NotificationsIcon />
               </Badge>
             </IconButton>

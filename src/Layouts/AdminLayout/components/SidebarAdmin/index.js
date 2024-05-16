@@ -235,7 +235,7 @@ function SidebarAdmin({ open, handleDrawerClose }) {
         </Link>
       </List>
       <Divider />
-      <List>
+      {/* <List>
         {["All mail", "Trash", "Spam"].map((text, index) => (
           <ListItem key={text} disablePadding sx={{ display: "block" }}>
             <ListItemButton
@@ -258,7 +258,7 @@ function SidebarAdmin({ open, handleDrawerClose }) {
             </ListItemButton>
           </ListItem>
         ))}
-      </List>
+      </List> */}
     </Drawer>
   );
 }

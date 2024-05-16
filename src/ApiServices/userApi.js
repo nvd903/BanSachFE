@@ -23,3 +23,15 @@ export const updateUser = async (payload, accessToken, id) => {
     console.log("update failure");
   }
 };
+
+
+export const deleteUser = async (accessToken, id) => {
+  try {
+    const res = await axios.delete(`http://localhost:3001/user/delete/${id}`, {
+      headers: { token: accessToken },
+    });
+    return res.data;
+  } catch (error) {
+    console.log("delete failure");
+  }
+};

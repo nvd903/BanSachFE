@@ -11,11 +11,11 @@ function Navi() {
           Home
         </NavLink>
       </NavItem>
-      <NavItem>
+      {/* <NavItem>
         <NavLink to="/category" className="nav__item">
           Category
         </NavLink>
-      </NavItem>
+      </NavItem> */}
     </Nav>
   );
 }

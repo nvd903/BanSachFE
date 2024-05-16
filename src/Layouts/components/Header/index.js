@@ -137,7 +137,7 @@ function Header() {
             </Menu>
           )}
 
-          <Menu items={cartItem}>
+          {/* <Menu items={dataCart}> */}
             <span>
               <Button
                 to="/cart"
@@ -146,7 +146,7 @@ function Header() {
                 countBadge={carts.length}
               ></Button>
             </span>
-          </Menu>
+          {/* </Menu> */}
         </div>
       </Container>
     </div>

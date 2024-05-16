@@ -72,9 +72,7 @@ function CategoryManagement() {
 
   const itemGenreOptions = [
     { label: "Get all genres", type: "getAllGenres" },
-    { label: "Export to PDF", type: "exportTOPDF" },
     { label: "Export to Excel", type: "exportToExcel" },
-    { label: "Import from Excel", type: "importFromExcel" },
   ];
 
   const handleClickGenreOptions = (menuItem) => {
@@ -82,16 +80,9 @@ function CategoryManagement() {
       case "getAllGenres":
         fetchDataGenre();
         break;
-      case "exportTOPDF":
-        exportPDF(dataGenres, "genre.pdf");
-        break;
       case "exportToExcel":
         exportExcel(dataGenres, "genre.xlsx");
         break;
-      case "importFromExcel":
-        importFromExcel("D:/Downloads/genre.xlsx");
-        break;
-
       default:
     }
   };

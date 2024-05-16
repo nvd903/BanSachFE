@@ -21,7 +21,6 @@ function Search() {
   const fetchApi = async (q, limit, type) => {
     const res = await search(q, limit, type);
     if (!!res) {
-      console.log(res);
       setResultSearch(res.data);
       setIsLoading(false);
     } else {

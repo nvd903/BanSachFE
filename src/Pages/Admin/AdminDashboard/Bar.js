@@ -53,7 +53,9 @@ const labels = [
 ];
 
 export function BarChart({ dataOrders }) {
+  
   if (dataOrders && dataOrders.length > 0) {
+    console.log("BarChart::", dataOrders);
     const newDataOrders = dataOrders.map((item) => {
       const dateString = item.createdAt;
       const date = new Date(dateString);

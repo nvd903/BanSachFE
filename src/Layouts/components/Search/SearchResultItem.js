@@ -1,9 +1,9 @@
 import { Link } from "react-router-dom";
 import "./Search.scss";
 
-function SearchResultItem({ data, onClick }) {
+function SearchResultItem({ data }) {
   return (
-    <Link className="search__result--item" onClick={onClick}>
+    <Link to={data._id ? `/detail-book/${data._id}` : "/"} className="search__result--item" >
       {data?.name || "abc"}
     </Link>
   );
