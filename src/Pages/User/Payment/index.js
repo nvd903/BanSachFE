@@ -17,6 +17,7 @@ import {
 import { createNewOrder } from "../../../ApiServices/orderApi";
 import { toast } from "react-toastify";
 import { removeCart } from "../../../ApiServices/cartApi";
+import AddNewAddress from "./AddNewAddress";
 
 const cx = classNames.bind(style);
 
@@ -24,8 +25,11 @@ function Payment() {
   const [defaultAddress, setDefaultAddress] = useState();
   const [allAddress, setAllAddress] = useState([]);
   const [modal, setModal] = useState(false);
+  const [newAdressModal, setNewAddresModal] = useState(false)
 
   const toggle = () => setModal(!modal);
+
+  const toggleNewAddressModal = () => setNewAddresModal(!newAdressModal)
 
   const currentUser = useSelector((state) => state.auth.login?.currentUser);
   const [dataAllBook, setDataAllBook] = useState([]);
@@ -35,13 +39,11 @@ function Payment() {
 
   const fetchDefaultAddress = async () => {
     const result = await getDefault(currentUser._id);
-    //log
     setDefaultAddress(result);
   };
 
   const fetchAllAddres = async () => {
     const result = await getAll(currentUser._id);
-    //log
     setAllAddress(result);
   };
 
@@ -115,8 +117,13 @@ function Payment() {
               <p style={{ color: "red" }}>Mặc định</p>
             )}
             <Button onClick={toggle}>Thay đổi</Button>
+            <Button onClick={toggleNewAddressModal}>Thêm địa chỉ nhận hàng</Button>
           </div>
         )}
+        {!defaultAddress && <div>
+          <Button onClick={toggleNewAddressModal}>Thêm địa chỉ nhận hàng</Button>
+          <Button onClick={toggle}>Chọn địa chỉ</Button>
+        </div>}
         <ModalSelectAddress
           modal={modal}
           toggle={toggle}
@@ -124,6 +131,9 @@ function Payment() {
           currentUser={currentUser}
           setDefaultAddress={setDefaultAddress}
         />
+        <AddNewAddress modal={newAdressModal}
+          toggle={toggleNewAddressModal}
+          currentUser={currentUser}/>
       </div>
 
       <div className={cx("order__detail__container")}>

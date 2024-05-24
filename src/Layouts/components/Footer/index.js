@@ -3,7 +3,7 @@ import "./Footer.scss";
 import logo from "../../../assets/images/logo.png"
 
 function Footer() {
-  return <div className="container-fluid">
+  return <div className="container-fluid footer_wrapper ">
       <p>
         Copyright © By Nguyễn Văn Dũng.
       </p>

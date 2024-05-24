@@ -15,6 +15,15 @@ export const getCart = async (idUser) => {
   }
 };
 
+export const createCart = async (payload) => {
+  try {
+    const res = await axios.post(`http://localhost:3001/cart/create`, payload);
+    return res.data;
+  } catch (error) {
+    console.log("loi get cart");
+  }
+};
+
 export const addToCart = async (idUser, payload, dispatch) => {
   try {
     const res = await axios.post(

@@ -202,3 +202,27 @@
   display: flex;
   justify-content: space-around;
 }
+
+.newAddressWrapper{ 
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+  .item_row{
+    display: flex;
+    gap: 10px;
+    .item_label{ 
+      width: 100px;
+    }
+
+    .item_input{ 
+      flex: 1;
+      height: 32px;
+      padding: 0 8px;
+      border: 1px solid #eee;
+      border-radius: 4px;
+      &:focus {
+       border-color: #40aad9;
+      }
+    }
+  }
+}

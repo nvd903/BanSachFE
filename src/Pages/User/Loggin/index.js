@@ -44,10 +44,11 @@ function Loggin() {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault();
     const newUser = { username, password };
     loginUser(newUser, dispatch, navigate);
+
   };
   return (
     <div className="loggin__container">

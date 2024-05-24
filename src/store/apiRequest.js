@@ -16,7 +16,7 @@ import {
 } from "./userSlice";
 import { persistor } from "./index";
 // import { addToCart } from "./cartSlice";
-
+import { createCart } from "../ApiServices/cartApi";
 export const loginUser = async (user, dispatch, navigate) => {
   dispatch(loginStart());
   try {
@@ -41,11 +41,13 @@ export const loginUser = async (user, dispatch, navigate) => {
 export const registerUser = async (user, dispatch, navigate) => {
   dispatch(registerStart());
   try {
-    await axios.post(`http://localhost:3001/auth/singup`, user);
+    const res = await axios.post(`http://localhost:3001/auth/singup`, user);
     dispatch(registerSuccess());
     toast.success("register successfully!", {
       position: toast.POSITION.TOP_RIGHT,
     });
+    console.log("resssss:::", res);
+    await createCart({user: res.data._id})
     navigate("/loggin");
   } catch (error) {
     dispatch(registerFailed());

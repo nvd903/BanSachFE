@@ -142,8 +142,8 @@ function Header() {
               <Button
                 to="/cart"
                 leftIcon={<i className="fa fa-shopping-bag " />}
-                badge
-                countBadge={carts.length}
+                // badge = "false"
+                // countBadge={carts.length}
               ></Button>
             </span>
           {/* </Menu> */}
